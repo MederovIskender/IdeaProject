@@ -1,23 +1,23 @@
 package kg.itschoolmegacom.projectidea.models.entities;
 
-import lombok.AccessLevel;
-import lombok.Data;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Idea {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
     String title;
     String text;
-    boolean contactWithMe;
+    String contactWithMe;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

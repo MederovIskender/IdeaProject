@@ -1,11 +1,12 @@
 package kg.itschoolmegacom.projectidea.services;
 
-import kg.itschoolmegacom.projectidea.models.dtos.IdeaDto;
+import kg.itschoolmegacom.projectidea.models.dtos.IdeaEntityDto;
+import kg.itschoolmegacom.projectidea.models.dtos.UserIdeasDto;
 
 import java.util.List;
 
 public interface IdeaService {
-    IdeaDto save(IdeaDto ideaDto);
+    IdeaEntityDto save(IdeaEntityDto ideaEntityDto);
 
-    List<IdeaDto> getAllIdeas(String phone);
+    List<UserIdeasDto> getAllIdeas(String phone);
 }
